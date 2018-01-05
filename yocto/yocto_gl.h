@@ -6833,7 +6833,7 @@ struct texture_info {
     /// mipmaping
     bool mipmap = true;
     /// texture strength (occlusion and normal)
-    float scale = 1;
+    float scale = 1.0f;
 
     /// check whether the texture if present
     operator bool() const { return (bool)txt; }
@@ -6871,9 +6871,9 @@ struct material {
     /// transmission color
     vec3f kt = {0, 0, 0};
     /// roughness
-    float rs = 0.0001;
+    float rs = 0.0001.f;
     /// opacity
-    float op = 1;
+    float op = 1.0f;
 
     // textures -------------------------------
     /// emission texture
@@ -6980,17 +6980,17 @@ struct camera {
     /// ortho cam
     bool ortho = false;
     /// vertical field of view
-    float yfov = 2;
+    float yfov = 2.0f;
     /// aspect ratio
     float aspect = 16.0f / 9.0f;
     /// focus distance
-    float focus = 1;
+    float focus = 1.0f;
     /// lens aperture
-    float aperture = 0;
+    float aperture = 0.0f;
     /// near plane distance
     float near = 0.01f;
     /// far plane distance
-    float far = 10000;
+    float far = 10000.0f;
 };
 
 /// Envinonment map
